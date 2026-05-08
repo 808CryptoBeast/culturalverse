@@ -29,7 +29,7 @@
     <section class="hero reveal modern-hero" id="hero-shell">
       <p class="eyebrow">Living Atlas Layer</p>
       <h1 class="immersive-text">Where Culture Becomes Place.</h1>
-      <p class="hero-copy">Step inside living worlds of culture through place, protocol, story, sound, symbol, ceremony, ecology, and relationship.</p>
+      <p class="hero-copy">Step inside living worlds of culture through <span class="text-shimmer">place</span>, <span class="text-shimmer">story</span>, sound, symbol, ceremony, ecology, and relationship.</p>
       <p class="hero-subcopy">Not a lesson library. Not a global graph. A living atlas of immersive cultural worlds.</p>
       <div class="actions-row modern-actions">
         <a class="btn btn-solid glow-interactive" href="culturalverse/worlds.html">Enter the Worlds</a>
@@ -51,10 +51,29 @@
           <p class="signal-value">8 Learning Flows</p>
         </article>
       </div>
-      <div class="hero-motif" aria-hidden="true">
-        <span class="ring ring-1"></span>
-        <span class="ring ring-2"></span>
-        <span class="ring ring-3"></span>
+      <div class="atlas-detail-strip" aria-label="Living Atlas Detail Layers">
+        <article class="atlas-detail-card">
+          <p class="atlas-detail-kicker">Spatial Layer</p>
+          <p class="atlas-detail-value">Watershed, coast, and migration memory</p>
+        </article>
+        <article class="atlas-detail-card">
+          <p class="atlas-detail-kicker">Narrative Layer</p>
+          <p class="atlas-detail-value">Oral pathways, chants, and constellations</p>
+        </article>
+        <article class="atlas-detail-card">
+          <p class="atlas-detail-kicker">Practice Layer</p>
+          <p class="atlas-detail-value">Language, ceremony, and lived responsibility</p>
+        </article>
+      </div>
+      <div class="hero-motif atlas-glyph" aria-hidden="true">
+        <span class="glyph-core"></span>
+        <span class="glyph-orbit glyph-orbit-1"></span>
+        <span class="glyph-orbit glyph-orbit-2"></span>
+        <span class="glyph-line glyph-line-1"></span>
+        <span class="glyph-line glyph-line-2"></span>
+        <span class="glyph-node glyph-node-1">Place</span>
+        <span class="glyph-node glyph-node-2">Story</span>
+        <span class="glyph-node glyph-node-3">Lineage</span>
       </div>
       <div class="hero-grid-overlay" aria-hidden="true"></div>
     </section>
@@ -67,23 +86,25 @@
 
     <section class="reveal">
       <h2>World Portals</h2>
-      <p class="section-intro">Approach with protocol, then walk the path through symbolic world spaces.</p>
+      <p class="section-intro">Walk the path through symbolic world spaces and deepen through place-rooted story.</p>
       <div class="portal-grid">
-        <article class="portal-card world-kanaka glow-interactive" data-tilt-card>
+        <article class="portal-card world-kanaka glow-interactive" data-tilt-card data-world-card data-world-id="kanaka" role="button" tabindex="0" aria-label="Open Kānaka immersive story layer">
           <p class="portal-symbol">Aina Wa</p>
-          <h3>Kānaka Maoli World</h3>
-          <p>Ocean, kalo, language, and relationship from mauka to makai.</p>
+          <h3 class="word-glow">Kānaka Maoli World</h3>
+          <p>Ocean, kalo, language, and relationship from <span class="text-shimmer">mauka to makai</span>.</p>
           <div class="portal-actions">
+            <button class="btn btn-outline" type="button" data-open-world-layer data-world-id="kanaka">Open Immersive Layer</button>
             <a class="btn btn-solid" href="culturalverse/worlds.html">Enter World</a>
             <a class="btn btn-outline" href="https://www.pikoverse.xyz/" target="_blank" rel="noreferrer noopener">Study on LKP</a>
             <a class="btn btn-outline" href="https://www.pikoverse.xyz/" target="_blank" rel="noreferrer noopener">Explore the Sky</a>
           </div>
         </article>
-        <article class="portal-card world-kemet glow-interactive" data-tilt-card>
+        <article class="portal-card world-kemet glow-interactive" data-tilt-card data-world-card data-world-id="kemet" role="button" tabindex="0" aria-label="Open Kemet immersive story layer">
           <p class="portal-symbol">Maat Sesh</p>
-          <h3>Kemet World</h3>
-          <p>Papyrus, Nile flow, temple geometry, and living archive memory.</p>
+          <h3 class="word-glow">Kemet World</h3>
+          <p>Papyrus, Nile flow, temple geometry, and <span class="text-shimmer">living archive memory</span>.</p>
           <div class="portal-actions">
+            <button class="btn btn-outline" type="button" data-open-world-layer data-world-id="kemet">Open Immersive Layer</button>
             <a class="btn btn-solid" href="culturalverse/worlds.html">Open Story Chamber</a>
             <a class="btn btn-outline" href="https://www.pikoverse.xyz/" target="_blank" rel="noreferrer noopener">View Global Connections</a>
             <a class="btn btn-outline" href="https://www.pikoverse.xyz/" target="_blank" rel="noreferrer noopener">Study on LKP</a>
@@ -113,39 +134,23 @@
       </blockquote>
     </section>
 
-    <section class="cv-protocol-panel reveal">
-      <h2>Approach with Protocol</h2>
-      <p>Culture is living memory. Enter each world through respect, attribution, and relationship to people and place.</p>
-      <div class="actions-row">
-        <button class="btn btn-solid" type="button" data-open-protocol>Approach with Protocol</button>
-        <a class="btn btn-outline" href="culturalverse/protocols.html">Open Protocol Chamber</a>
+    <section class="reveal">
+      <h2>Deep Cultural Threads</h2>
+      <p class="section-intro">Go deeper through the relationships that carry knowledge: land, story, language, and ceremony.</p>
+      <div class="card-grid">
+        <article class="card depth-card glow-interactive">
+          <h3 class="word-glow">Place Memory</h3>
+          <p>Map each culture through watersheds, winds, coastlines, migration routes, and sacred landmarks.</p>
+        </article>
+        <article class="card depth-card glow-interactive">
+          <h3 class="word-glow">Story Constellations</h3>
+          <p>Follow oral pathways where chants, epics, and origin stories encode ecological and social knowledge.</p>
+        </article>
+        <article class="card depth-card glow-interactive">
+          <h3 class="word-glow">Living Practice</h3>
+          <p>Move beyond reading and into respectful participation through pronunciation, gesture, and context-aware action.</p>
+        </article>
       </div>
-    </section>
-
-    <section class="two-col reveal">
-      <article class="card">
-        <h2>Save to Passport</h2>
-        <p>Save lightweight reflections locally for now. Supabase sync can be added in Phase 4.</p>
-        <form id="reflection-form">
-          <label for="reflection-text">What responsibility will guide your learning today?</label>
-          <textarea id="reflection-text" name="reflection" rows="5" placeholder="Write a short reflection..."></textarea>
-          <button class="btn btn-solid" type="submit">Save Reflection</button>
-          <p id="reflection-status" class="status"></p>
-        </form>
-      </article>
-
-      <article class="card">
-        <h2>Soundscape Preference</h2>
-        <p>Choose a default ambient mode and persist it with localStorage.</p>
-        <label for="soundscape-mode">Preferred soundscape</label>
-        <select id="soundscape-mode" name="soundscape-mode">
-          <option value="ocean">Ocean Breath</option>
-          <option value="forest">Forest Wind</option>
-          <option value="night">Night Sky</option>
-          <option value="silent">Silent Study</option>
-        </select>
-        <p id="soundscape-status" class="status"></p>
-      </article>
     </section>
 
     <section class="reveal">
@@ -167,6 +172,29 @@
     </div>
   </section>
 
+  <section id="world-layer-modal" class="modal world-layer-modal" hidden role="dialog" aria-labelledby="world-layer-title">
+    <div class="modal-panel world-layer-panel">
+      <p class="world-layer-kicker" id="world-layer-region"></p>
+      <h2 id="world-layer-title">Immersive Story Layer</h2>
+      <p id="world-layer-summary"></p>
+      <div class="world-layer-grid">
+        <article class="world-layer-card">
+          <h3>Story Thread</h3>
+          <p id="world-layer-story"></p>
+        </article>
+        <article class="world-layer-card">
+          <h3>Learning Paths</h3>
+          <ul id="world-layer-paths"></ul>
+        </article>
+      </div>
+      <blockquote id="world-layer-quote" class="guiding-principle"></blockquote>
+      <div class="actions-row">
+        <a id="world-layer-link" class="btn btn-solid" href="culturalverse/worlds.html">Enter This World</a>
+        <button class="btn btn-outline" type="button" data-close-world-layer>Close Layer</button>
+      </div>
+    </div>
+  </section>
+
   <footer class="site-footer">
     <p>Created by Aloha Mass Productions / 808CryptoBeast.</p>
     <p>Built from Hawaii with a culture-first vision. <span id="year"></span></p>
@@ -184,5 +212,6 @@
   <script src="culturalverse/js/culturalverse.js" defer></script>
     <script src="culturalverse/js/home-scene.js" defer></script>
   <script src="culturalverse/js/home-interactions.js" defer></script>
+  <script src="culturalverse/js/home-world-layer.js" defer></script>
 </body>
 </html>

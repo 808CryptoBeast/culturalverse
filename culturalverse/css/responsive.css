@@ -15,8 +15,9 @@
 	}
 
 	.hero-motif {
-		right: -70px;
-		top: -58px;
+		right: -52px;
+		top: -46px;
+		transform: scale(0.82);
 		opacity: 0.6;
 	}
 
@@ -29,6 +30,14 @@
 	}
 
 	.hero-signal-rail {
+		grid-template-columns: 1fr;
+	}
+
+	.atlas-detail-strip {
+		grid-template-columns: 1fr;
+	}
+
+	.world-layer-grid {
 		grid-template-columns: 1fr;
 	}
 }
