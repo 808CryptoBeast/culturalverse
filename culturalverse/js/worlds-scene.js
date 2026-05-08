@@ -10,6 +10,9 @@
 		}
 
 		const manager = window.CVThreeManager.init("worlds-three-canvas");
+		if (!manager) {
+			return false;
+		}
 		const worldsScene = manager.createScene("worlds", {
 			ambientIntensity: 0.8,
 			warmIntensity: 1.3,
@@ -123,8 +126,8 @@
 		};
 
 		// Click detection for world selection
-		const raycaster = new THREE.Raycaster();
-		const mouse = new THREE.Vector2();
+		const raycaster = new window.THREE.Raycaster();
+		const mouse = new window.THREE.Vector2();
 
 		container.addEventListener("click", (event) => {
 			mouse.x = (event.clientX / container.clientWidth) * 2 - 1;
@@ -188,13 +191,21 @@
 		}
 
 		console.log("✦ Worlds scene initialized with explorable spheres");
+		return true;
 	}
 
 	document.addEventListener("DOMContentLoaded", function () {
-		if (window.CVThreeManager) {
+		if (window.THREE) {
 			initWorldsScene();
-		} else {
-			setTimeout(initWorldsScene, 500);
+			return;
 		}
+
+		window.addEventListener(
+			"cv:three-ready",
+			function () {
+				initWorldsScene();
+			},
+			{ once: true }
+		);
 	});
 })();

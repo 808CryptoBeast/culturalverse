@@ -11,6 +11,10 @@
 		 * Initialize Three.js with a container element
 		 */
 		init: function (containerId) {
+			if (!window.THREE) {
+				return null;
+			}
+
 			const container = document.getElementById(containerId);
 			if (!container) {
 				console.warn("CVThreeManager: container not found", containerId);
@@ -22,7 +26,7 @@
 			const height = container.clientHeight;
 
 			// Camera setup
-			this.camera = new THREE.PerspectiveCamera(
+			this.camera = new window.THREE.PerspectiveCamera(
 				60,
 				width / height,
 				0.1,
@@ -31,7 +35,7 @@
 			this.camera.position.z = 50;
 
 			// Renderer setup
-			this.renderer = new THREE.WebGLRenderer({
+			this.renderer = new window.THREE.WebGLRenderer({
 				antialias: true,
 				alpha: true,
 				powerPreference: "high-performance"
@@ -59,21 +63,25 @@
 		 * Create and register a new 3D scene
 		 */
 		createScene: function (name, config = {}) {
-			const scene = new THREE.Scene();
+			if (!window.THREE) {
+				return null;
+			}
+
+			const scene = new window.THREE.Scene();
 			
 			// Default fog for depth
-			scene.fog = new THREE.Fog(0x000000, 100, 300);
+			scene.fog = new window.THREE.Fog(0x000000, 100, 300);
 			
 			// Ambient light
-			const ambientLight = new THREE.AmbientLight(0xffffff, config.ambientIntensity || 0.6);
+			const ambientLight = new window.THREE.AmbientLight(0xffffff, config.ambientIntensity || 0.6);
 			scene.add(ambientLight);
 
 			// Point lights with warm/cool tones for Culturalverse
-			const warmLight = new THREE.PointLight(0xf0c96a, config.warmIntensity || 1, 200);
+			const warmLight = new window.THREE.PointLight(0xf0c96a, config.warmIntensity || 1, 200);
 			warmLight.position.set(50, 50, 50);
 			scene.add(warmLight);
 
-			const coolLight = new THREE.PointLight(0x1f9fb3, config.coolIntensity || 0.8, 200);
+			const coolLight = new window.THREE.PointLight(0x1f9fb3, config.coolIntensity || 0.8, 200);
 			coolLight.position.set(-50, -50, 50);
 			scene.add(coolLight);
 

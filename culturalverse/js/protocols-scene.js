@@ -10,6 +10,9 @@
 		}
 
 		const manager = window.CVThreeManager.init("protocols-three-canvas");
+		if (!manager) {
+			return false;
+		}
 		const protocolsScene = manager.createScene("protocols", {
 			ambientIntensity: 0.8,
 			warmIntensity: 1.2,
@@ -89,8 +92,8 @@
 		};
 
 		// Hover detection with raycaster
-		const raycaster = new THREE.Raycaster();
-		const mouse = new THREE.Vector2();
+		const raycaster = new window.THREE.Raycaster();
+		const mouse = new window.THREE.Vector2();
 
 		container.addEventListener("mousemove", (event) => {
 			mouse.x = (event.clientX / container.clientWidth) * 2 - 1;
@@ -135,13 +138,21 @@
 		}
 
 		console.log("✦ Protocols scene initialized with protocol node network");
+		return true;
 	}
 
 	document.addEventListener("DOMContentLoaded", function () {
-		if (window.CVThreeManager) {
+		if (window.THREE) {
 			initProtocolsScene();
-		} else {
-			setTimeout(initProtocolsScene, 500);
+			return;
 		}
+
+		window.addEventListener(
+			"cv:three-ready",
+			function () {
+				initProtocolsScene();
+			},
+			{ once: true }
+		);
 	});
 })();

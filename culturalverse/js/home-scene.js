@@ -11,6 +11,9 @@
 
 		// Initialize Three.js
 		const manager = window.CVThreeManager.init("home-three-canvas");
+		if (!manager) {
+			return false;
+		}
 
 		// Create home scene
 		const homeScene = manager.createScene("home", {
@@ -92,8 +95,8 @@
 		}
 
 		// Add click detection for world nodes
-		const raycaster = new THREE.Raycaster();
-		const mouse = new THREE.Vector2();
+		const raycaster = new window.THREE.Raycaster();
+		const mouse = new window.THREE.Vector2();
 
 		container.addEventListener("click", (event) => {
 			mouse.x = (event.clientX / container.clientWidth) * 2 - 1;
@@ -119,15 +122,21 @@
 		});
 
 		console.log("✦ Home scene initialized with mycelium network");
+		return true;
 	}
 
-	// Wait for DOM and managers ready
 	document.addEventListener("DOMContentLoaded", function () {
-		if (window.CVThreeManager) {
+		if (window.THREE) {
 			initHomeScene();
-		} else {
-			// Retry if not ready
-			setTimeout(initHomeScene, 500);
+			return;
 		}
+
+		window.addEventListener(
+			"cv:three-ready",
+			function () {
+				initHomeScene();
+			},
+			{ once: true }
+		);
 	});
 })();

@@ -26,22 +26,37 @@
   </header>
 
   <main class="container">
-    <section class="hero reveal">
+    <section class="hero reveal modern-hero" id="hero-shell">
       <p class="eyebrow">Living Atlas Layer</p>
-      <h1>Where Culture Becomes Place.</h1>
+      <h1 class="immersive-text">Where Culture Becomes Place.</h1>
       <p class="hero-copy">Step inside living worlds of culture through place, protocol, story, sound, symbol, ceremony, ecology, and relationship.</p>
       <p class="hero-subcopy">Not a lesson library. Not a global graph. A living atlas of immersive cultural worlds.</p>
-      <div class="actions-row">
-        <a class="btn btn-solid" href="culturalverse/worlds.html">Enter the Worlds</a>
-        <button class="btn btn-outline" type="button" data-open-protocol>Explore Protocol</button>
-        <a class="btn btn-outline" href="https://www.pikoverse.xyz/" target="_blank" rel="noreferrer noopener">Open Cosmic Weave</a>
-        <a class="btn btn-outline" href="https://www.pikoverse.xyz/" target="_blank" rel="noreferrer noopener">Study on LKP</a>
+      <div class="actions-row modern-actions">
+        <a class="btn btn-solid glow-interactive" href="culturalverse/worlds.html">Enter the Worlds</a>
+        <button class="btn btn-outline glow-interactive" type="button" data-open-protocol>Explore Protocol</button>
+        <a class="btn btn-outline glow-interactive" href="https://www.pikoverse.xyz/" target="_blank" rel="noreferrer noopener">Open Cosmic Weave</a>
+        <a class="btn btn-outline glow-interactive" href="https://www.pikoverse.xyz/" target="_blank" rel="noreferrer noopener">Study on LKP</a>
+      </div>
+      <div class="hero-signal-rail" aria-label="Live Culturalverse Signals">
+        <article class="signal-card pulse-energy">
+          <p class="signal-kicker">Live Worlds</p>
+          <p class="signal-value">02 Active Realms</p>
+        </article>
+        <article class="signal-card">
+          <p class="signal-kicker">Protocol State</p>
+          <p class="signal-value">Respect First</p>
+        </article>
+        <article class="signal-card">
+          <p class="signal-kicker">Pathways</p>
+          <p class="signal-value">8 Learning Flows</p>
+        </article>
       </div>
       <div class="hero-motif" aria-hidden="true">
         <span class="ring ring-1"></span>
         <span class="ring ring-2"></span>
         <span class="ring ring-3"></span>
       </div>
+      <div class="hero-grid-overlay" aria-hidden="true"></div>
     </section>
     
       <!-- Immersive 3D Mycelium Network -->
@@ -54,7 +69,7 @@
       <h2>World Portals</h2>
       <p class="section-intro">Approach with protocol, then walk the path through symbolic world spaces.</p>
       <div class="portal-grid">
-        <article class="portal-card world-kanaka">
+        <article class="portal-card world-kanaka glow-interactive" data-tilt-card>
           <p class="portal-symbol">Aina Wa</p>
           <h3>Kānaka Maoli World</h3>
           <p>Ocean, kalo, language, and relationship from mauka to makai.</p>
@@ -64,7 +79,7 @@
             <a class="btn btn-outline" href="https://www.pikoverse.xyz/" target="_blank" rel="noreferrer noopener">Explore the Sky</a>
           </div>
         </article>
-        <article class="portal-card world-kemet">
+        <article class="portal-card world-kemet glow-interactive" data-tilt-card>
           <p class="portal-symbol">Maat Sesh</p>
           <h3>Kemet World</h3>
           <p>Papyrus, Nile flow, temple geometry, and living archive memory.</p>
@@ -158,7 +173,7 @@
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
-  <script src="https://cdn.jsdelivr.net/npm/three@0.165.0/build/three.min.js" defer></script>
+  <script src="culturalverse/js/three-global-loader.js" defer></script>
     <script src="culturalverse/js/three-manager.js" defer></script>
     <script src="culturalverse/js/mycelium-network.js" defer></script>
     <script src="culturalverse/js/particle-system.js" defer></script>
@@ -168,5 +183,6 @@
   <script src="culturalverse/js/world-viewer.js" defer></script>
   <script src="culturalverse/js/culturalverse.js" defer></script>
     <script src="culturalverse/js/home-scene.js" defer></script>
+  <script src="culturalverse/js/home-interactions.js" defer></script>
 </body>
 </html>
