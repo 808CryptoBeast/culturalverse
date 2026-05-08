@@ -1,0 +1,59 @@
+@media (max-width: 860px) {
+	.site-header {
+		position: static;
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	.container {
+		width: min(1120px, 100% - 1.4rem);
+		margin-top: 1rem;
+	}
+
+	.hero {
+		padding: 1.2rem;
+	}
+
+	.hero-motif {
+		right: -70px;
+		top: -58px;
+		opacity: 0.6;
+	}
+
+	.portal-grid {
+		grid-template-columns: 1fr;
+	}
+
+	.two-col {
+		grid-template-columns: 1fr;
+	}
+}
+
+@media (max-width: 560px) {
+	.site-nav {
+		width: 100%;
+	}
+
+	.site-nav a {
+		flex: 1 1 auto;
+		text-align: center;
+	}
+
+	h1 {
+		font-size: clamp(1.65rem, 10vw, 2.3rem);
+	}
+
+	.actions-row {
+		flex-direction: column;
+		align-items: stretch;
+	}
+
+	.path-ribbons {
+		gap: 0.42rem;
+	}
+
+	.path-chip {
+		width: 100%;
+		text-align: center;
+	}
+}

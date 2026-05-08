@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Protocols | Culturalverse</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=DM+Sans:wght@400;500;700&family=Pirata+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/culturalverse.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <div class="ambient-orbs" aria-hidden="true"></div>
+  <header class="site-header">
+    <a class="brand" href="../index.html">Culturalverse</a>
+    <nav class="site-nav" aria-label="Main">
+      <a href="../index.html">Home</a>
+      <a href="worlds.html">Worlds</a>
+      <a href="protocols.html" aria-current="page">Protocols</a>
+      <a href="matrix.html">Matrix</a>
+      <a href="about.html">About</a>
+    </nav>
+  </header>
+
+    <!-- Immersive 3D Protocol Network -->
+    <section class="reveal">
+      <p class="section-intro">The protocol nodes connect respect, attribution, context, governance, and sacred knowledge. Drag to explore.</p>
+      <div id="protocols-three-canvas" class="three-canvas-container" style="height: 450px;"></div>
+    </section>
+  <main class="container">
+    <section class="hero reveal">
+      <p class="eyebrow">Cultural Protocol</p>
+      <h1>Approach with Protocol</h1>
+      <p class="hero-copy">Culturalverse is a living cultural space. Enter with humility, attribution, context, and care for community boundaries.</p>
+      <div class="actions-row">
+        <button class="btn btn-solid" type="button" data-open-protocol>Open Protocol Summary</button>
+        <a class="btn btn-outline" href="worlds.html">Return to Worlds</a>
+      </div>
+    </section>
+
+    <section class="cv-protocol-panel reveal">
+      <h2>Protocol Commitments</h2>
+      <ul>
+        <li>Knowledge is carried by people and place, not abstract data.</li>
+        <li>Language, names, and symbols must be held with attribution and context.</li>
+        <li>Sacred knowledge is not generic content and should not be flattened.</li>
+      </ul>
+    </section>
+
+    <section class="card-grid reveal">
+      <article class="card"><h2>People</h2><p>Honor source keepers, lineages, and communities as the center of knowledge.</p></article>
+      <article class="card"><h2>Place</h2><p>Root every insight in land, ecology, migration, and relationship.</p></article>
+      <article class="card"><h2>Practice</h2><p>Move from observation to responsibility through respectful learning action.</p></article>
+    </section>
+
+    <section class="reveal">
+      <h2>Ecosystem Links</h2>
+      <div id="ecosystem-links" class="ecosystem-links"></div>
+    </section>
+  </main>
+
+  <section id="protocol-modal" class="modal" hidden role="dialog" aria-labelledby="protocol-title">
+    <div class="modal-panel">
+      <h2 id="protocol-title">Protocol Summary</h2>
+      <p>Use cultural materials with care, proper attribution, and explicit context.</p>
+      <ul>
+        <li>Respect community governance and boundaries.</li>
+        <li>Credit source keepers and lineages.</li>
+        <li>Do not flatten sacred knowledge into generic content.</li>
+      </ul>
+      <button class="btn btn-solid" type="button" data-close-protocol>Close</button>
+    </div>
+  </section>
+
+  <script src="js/ecosystem-links.js" defer></script>
+  <script src="js/protocol-guide.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.165.0/build/three.min.js" defer></script>
+    <script src="js/three-manager.js" defer></script>
+    <script src="js/mycelium-network.js" defer></script>
+    <script src="js/particle-system.js" defer></script>
+  <script src="js/culturalverse.js" defer></script>
+    <script src="js/protocols-scene.js" defer></script>
+</body>
+</html>

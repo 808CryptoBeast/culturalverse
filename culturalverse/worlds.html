@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Worlds | Culturalverse</title>
+  <meta name="description" content="Explore Culturalverse world cards, experience paths, symbolic environments, and ecosystem links.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=DM+Sans:wght@400;500;700&family=Pirata+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/culturalverse.css">
+  <link rel="stylesheet" href="css/worlds.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <div class="ambient-orbs" aria-hidden="true"></div>
+  <header class="site-header">
+    <a class="brand" href="../index.html">Culturalverse</a>
+    <nav class="site-nav" aria-label="Main">
+      <a href="../index.html">Home</a>
+      <a href="worlds.html" aria-current="page">Worlds</a>
+      <a href="protocols.html">Protocols</a>
+      <a href="matrix.html">Matrix</a>
+      <a href="about.html">About</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="hero reveal">
+      <p class="eyebrow">Living World Atlas</p>
+      <h1>Enter the Worlds</h1>
+      <p class="hero-copy">Walk through cultural realms as living places, not content categories. Start with Kānaka Maoli and Kemet, then expand through protocol-guided paths.</p>
+      <div class="path-ribbons">
+        <span class="path-chip path-ocean">Ocean Path</span>
+        <span class="path-chip path-land">Land Path</span>
+        <span class="path-chip path-sky">Sky Path</span>
+        <span class="path-chip path-voice">Voice Path</span>
+      </div>
+    </section>
+
+    <section class="world-viewer-layout reveal">
+      <div>
+        <h2>Symbolic World Cards</h2>
+        <div id="world-cards" class="card-grid world-cards"></div>
+      <!-- Immersive 3D World Spheres -->
+      <section class="reveal">
+        <p class="section-intro">Explore the worlds as interconnected spheres. Click to dive deeper into each realm.</p>
+        <div id="worlds-three-canvas" class="three-canvas-container" style="height: 500px;"></div>
+      </section>
+      </div>
+      <aside id="world-detail" class="card world-detail" aria-live="polite">
+        <h2>Open Story Chamber</h2>
+        <p>Select a world card to walk its paths, approach its symbols, and open linked ecosystem actions.</p>
+      </aside>
+    </section>
+
+    <section class="reveal">
+      <h2>Sacred Map Panels</h2>
+      <p class="section-intro">Flow lines and place anchors for mauka-to-makai and river-to-sky learning movement.</p>
+      <div id="world-map-panels" class="map-panels"></div>
+    </section>
+
+    <section class="cv-protocol-panel reveal">
+      <h2>Approach with Protocol</h2>
+      <p>Before entering deep symbolic layers, honor origin communities, names, and context.</p>
+      <div class="actions-row">
+        <a class="btn btn-solid" href="protocols.html">Open Protocol Chamber</a>
+        <a class="btn btn-outline" href="https://www.pikoverse.xyz/" target="_blank" rel="noreferrer noopener">View Global Connections</a>
+      </div>
+    </section>
+
+    <section class="reveal">
+      <h2>Ecosystem Links</h2>
+      <div id="ecosystem-links" class="ecosystem-links"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Track visited worlds and favorites locally in this phase.</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
+  <script src="js/worlds-data.js" defer></script>
+  <script src="js/ecosystem-links.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.165.0/build/three.min.js" defer></script>
+    <script src="js/three-manager.js" defer></script>
+    <script src="js/mycelium-network.js" defer></script>
+    <script src="js/particle-system.js" defer></script>
+  <script src="js/world-viewer.js" defer></script>
+  <script src="js/culturalverse.js" defer></script>
+    <script src="js/worlds-scene.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Culturalverse | Where Culture Becomes Place</title>
+  <meta name="description" content="An immersive culture-world layer where living traditions are explored through place, protocol, story, symbol, sound, and relationship.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=DM+Sans:wght@400;500;700&family=Pirata+One&display=swap" rel="stylesheet">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="stylesheet" href="culturalverse/css/culturalverse.css">
+  <link rel="stylesheet" href="culturalverse/css/responsive.css">
+</head>
+<body class="landing-page">
+  <div class="ambient-orbs" aria-hidden="true"></div>
+  <header class="site-header">
+    <a class="brand" href="index.html">Culturalverse</a>
+    <nav class="site-nav" aria-label="Main">
+      <a href="index.html" aria-current="page">Home</a>
+      <a href="culturalverse/worlds.html">Worlds</a>
+      <a href="culturalverse/protocols.html">Protocols</a>
+      <a href="culturalverse/matrix.html">Matrix</a>
+      <a href="culturalverse/about.html">About</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="hero reveal">
+      <p class="eyebrow">Living Atlas Layer</p>
+      <h1>Where Culture Becomes Place.</h1>
+      <p class="hero-copy">Step inside living worlds of culture through place, protocol, story, sound, symbol, ceremony, ecology, and relationship.</p>
+      <p class="hero-subcopy">Not a lesson library. Not a global graph. A living atlas of immersive cultural worlds.</p>
+      <div class="actions-row">
+        <a class="btn btn-solid" href="culturalverse/worlds.html">Enter the Worlds</a>
+        <button class="btn btn-outline" type="button" data-open-protocol>Explore Protocol</button>
+        <a class="btn btn-outline" href="https://www.pikoverse.xyz/" target="_blank" rel="noreferrer noopener">Open Cosmic Weave</a>
+        <a class="btn btn-outline" href="https://www.pikoverse.xyz/" target="_blank" rel="noreferrer noopener">Study on LKP</a>
+      </div>
+      <div class="hero-motif" aria-hidden="true">
+        <span class="ring ring-1"></span>
+        <span class="ring ring-2"></span>
+        <span class="ring ring-3"></span>
+      </div>
+    </section>
+    
+      <!-- Immersive 3D Mycelium Network -->
+      <section class="reveal">
+        <p class="section-intro">Navigate the mycelium network connecting all cultural worlds</p>
+        <div id="home-three-canvas" class="three-canvas-container"></div>
+      </section>
+
+    <section class="reveal">
+      <h2>World Portals</h2>
+      <p class="section-intro">Approach with protocol, then walk the path through symbolic world spaces.</p>
+      <div class="portal-grid">
+        <article class="portal-card world-kanaka">
+          <p class="portal-symbol">Aina Wa</p>
+          <h3>Kānaka Maoli World</h3>
+          <p>Ocean, kalo, language, and relationship from mauka to makai.</p>
+          <div class="portal-actions">
+            <a class="btn btn-solid" href="culturalverse/worlds.html">Enter World</a>
+            <a class="btn btn-outline" href="https://www.pikoverse.xyz/" target="_blank" rel="noreferrer noopener">Study on LKP</a>
+            <a class="btn btn-outline" href="https://www.pikoverse.xyz/" target="_blank" rel="noreferrer noopener">Explore the Sky</a>
+          </div>
+        </article>
+        <article class="portal-card world-kemet">
+          <p class="portal-symbol">Maat Sesh</p>
+          <h3>Kemet World</h3>
+          <p>Papyrus, Nile flow, temple geometry, and living archive memory.</p>
+          <div class="portal-actions">
+            <a class="btn btn-solid" href="culturalverse/worlds.html">Open Story Chamber</a>
+            <a class="btn btn-outline" href="https://www.pikoverse.xyz/" target="_blank" rel="noreferrer noopener">View Global Connections</a>
+            <a class="btn btn-outline" href="https://www.pikoverse.xyz/" target="_blank" rel="noreferrer noopener">Study on LKP</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="reveal">
+      <h2>Walk the Paths</h2>
+      <div class="path-ribbons">
+        <span class="path-chip path-ocean">Ocean Path</span>
+        <span class="path-chip path-land">Land Path</span>
+        <span class="path-chip path-sky">Sky Path</span>
+        <span class="path-chip path-voice">Voice Path</span>
+        <span class="path-chip path-ceremony">Ceremony Path</span>
+        <span class="path-chip path-healing">Healing Path</span>
+        <span class="path-chip path-architecture">Architecture Path</span>
+        <span class="path-chip path-ethics">Ethics Path</span>
+      </div>
+    </section>
+
+    <section class="reveal">
+      <h2>Guiding Principle</h2>
+      <blockquote class="guiding-principle">
+        Knowledge is not only data. It is carried by people. It is rooted in place. It is shaped by language. It is protected by protocol. It is renewed through practice. It is inherited with responsibility.
+      </blockquote>
+    </section>
+
+    <section class="cv-protocol-panel reveal">
+      <h2>Approach with Protocol</h2>
+      <p>Culture is living memory. Enter each world through respect, attribution, and relationship to people and place.</p>
+      <div class="actions-row">
+        <button class="btn btn-solid" type="button" data-open-protocol>Approach with Protocol</button>
+        <a class="btn btn-outline" href="culturalverse/protocols.html">Open Protocol Chamber</a>
+      </div>
+    </section>
+
+    <section class="two-col reveal">
+      <article class="card">
+        <h2>Save to Passport</h2>
+        <p>Save lightweight reflections locally for now. Supabase sync can be added in Phase 4.</p>
+        <form id="reflection-form">
+          <label for="reflection-text">What responsibility will guide your learning today?</label>
+          <textarea id="reflection-text" name="reflection" rows="5" placeholder="Write a short reflection..."></textarea>
+          <button class="btn btn-solid" type="submit">Save Reflection</button>
+          <p id="reflection-status" class="status"></p>
+        </form>
+      </article>
+
+      <article class="card">
+        <h2>Soundscape Preference</h2>
+        <p>Choose a default ambient mode and persist it with localStorage.</p>
+        <label for="soundscape-mode">Preferred soundscape</label>
+        <select id="soundscape-mode" name="soundscape-mode">
+          <option value="ocean">Ocean Breath</option>
+          <option value="forest">Forest Wind</option>
+          <option value="night">Night Sky</option>
+          <option value="silent">Silent Study</option>
+        </select>
+        <p id="soundscape-status" class="status"></p>
+      </article>
+    </section>
+
+    <section class="reveal">
+      <h2>Ecosystem Links</h2>
+      <div id="ecosystem-links" class="ecosystem-links"></div>
+    </section>
+  </main>
+
+  <section id="protocol-modal" class="modal" hidden role="dialog" aria-labelledby="protocol-title">
+    <div class="modal-panel">
+      <h2 id="protocol-title">Cultural Protocol</h2>
+      <p>Approach each tradition with humility, attribution, and context. Do not extract sacred material from living communities without invitation.</p>
+      <ul>
+        <li>Respect origin communities and stewards.</li>
+        <li>Prioritize context over novelty.</li>
+        <li>Document sources and attribution clearly.</li>
+      </ul>
+      <button class="btn btn-solid" type="button" data-close-protocol>Close</button>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <p>Created by Aloha Mass Productions / 808CryptoBeast.</p>
+    <p>Built from Hawaii with a culture-first vision. <span id="year"></span></p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.165.0/build/three.min.js" defer></script>
+    <script src="culturalverse/js/three-manager.js" defer></script>
+    <script src="culturalverse/js/mycelium-network.js" defer></script>
+    <script src="culturalverse/js/particle-system.js" defer></script>
+  <script src="culturalverse/js/worlds-data.js" defer></script>
+  <script src="culturalverse/js/ecosystem-links.js" defer></script>
+  <script src="culturalverse/js/protocol-guide.js" defer></script>
+  <script src="culturalverse/js/world-viewer.js" defer></script>
+  <script src="culturalverse/js/culturalverse.js" defer></script>
+    <script src="culturalverse/js/home-scene.js" defer></script>
+</body>
+</html>
