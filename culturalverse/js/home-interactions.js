@@ -6,7 +6,6 @@
 			return;
 		}
 
-		const motif = hero.querySelector(".hero-motif");
 		const grid = hero.querySelector(".hero-grid-overlay");
 		const signalCards = hero.querySelectorAll(".signal-card");
 
@@ -14,10 +13,6 @@
 			const rect = hero.getBoundingClientRect();
 			const px = (event.clientX - rect.left) / rect.width - 0.5;
 			const py = (event.clientY - rect.top) / rect.height - 0.5;
-
-			if (motif) {
-				motif.style.transform = "translate3d(" + px * 20 + "px," + py * 16 + "px,0)";
-			}
 
 			if (grid) {
 				grid.style.transform = "translate3d(" + px * 10 + "px," + py * 10 + "px,0)";
@@ -30,9 +25,6 @@
 		});
 
 		hero.addEventListener("pointerleave", function () {
-			if (motif) {
-				motif.style.transform = "translate3d(0,0,0)";
-			}
 			if (grid) {
 				grid.style.transform = "translate3d(0,0,0)";
 			}

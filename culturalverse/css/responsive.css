@@ -14,11 +14,20 @@
 		padding: 1.2rem;
 	}
 
-	.hero-motif {
-		right: -52px;
-		top: -46px;
-		transform: scale(0.82);
-		opacity: 0.6;
+	.modern-hero {
+		min-height: auto;
+		padding-right: 1.2rem;
+	}
+
+	.hero-neuro-motif {
+		position: relative;
+		right: auto;
+		top: auto;
+		transform: none;
+		width: min(20rem, 100%);
+		margin: 1rem auto 0;
+		opacity: 0.82;
+		animation: none;
 	}
 
 	.portal-grid {
@@ -54,6 +63,11 @@
 
 	h1 {
 		font-size: clamp(1.65rem, 10vw, 2.3rem);
+	}
+
+	.hero-neuro-motif {
+		width: min(15rem, calc(100% - 1rem));
+		opacity: 0.74;
 	}
 
 	.actions-row {

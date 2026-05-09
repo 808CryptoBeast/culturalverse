@@ -1,0 +1,143 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 760" fill="none" role="img" aria-label="">
+  <defs>
+    <radialGradient id="bg-core" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(380 380) rotate(90) scale(340)">
+      <stop offset="0" stop-color="#152456"/>
+      <stop offset="0.56" stop-color="#0b132f"/>
+      <stop offset="1" stop-color="#02040a"/>
+    </radialGradient>
+    <linearGradient id="gold-metal" x1="92" y1="96" x2="664" y2="654" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff4da"/>
+      <stop offset="0.18" stop-color="#f0d59c"/>
+      <stop offset="0.46" stop-color="#c38d33"/>
+      <stop offset="0.72" stop-color="#efca80"/>
+      <stop offset="1" stop-color="#fff0cd"/>
+    </linearGradient>
+    <linearGradient id="gold-shadow" x1="158" y1="138" x2="620" y2="618" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#8d6222"/>
+      <stop offset="1" stop-color="#c48f39"/>
+    </linearGradient>
+    <linearGradient id="ivory-polish" x1="238" y1="620" x2="520" y2="162" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#f9efdb"/>
+      <stop offset="1" stop-color="#f1ddaf"/>
+    </linearGradient>
+    <linearGradient id="teal-accent" x1="200" y1="550" x2="558" y2="244" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#1f93a4"/>
+      <stop offset="1" stop-color="#64bfca"/>
+    </linearGradient>
+    <radialGradient id="solar-core" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(380 202) rotate(90) scale(60)">
+      <stop offset="0" stop-color="#fff0c8"/>
+      <stop offset="1" stop-color="#d8a34b"/>
+    </radialGradient>
+    <filter id="drop" x="-24%" y="-24%" width="148%" height="148%">
+      <feDropShadow dx="0" dy="14" stdDeviation="12" flood-color="#010206" flood-opacity="0.7"/>
+    </filter>
+  </defs>
+
+  <circle cx="380" cy="380" r="332" fill="url(#bg-core)"/>
+
+  <g filter="url(#drop)">
+    <circle cx="380" cy="380" r="305" stroke="url(#gold-metal)" stroke-width="18"/>
+    <circle cx="380" cy="380" r="305" stroke="url(#gold-shadow)" stroke-width="4" stroke-opacity="0.72"/>
+    <circle cx="380" cy="380" r="279" stroke="url(#ivory-polish)" stroke-width="2.2"/>
+  </g>
+
+  <g opacity="0.82" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="380" cy="380" r="250" stroke="url(#gold-metal)" stroke-width="1.4" stroke-dasharray="2 10"/>
+    <circle cx="380" cy="380" r="184" stroke="url(#ivory-polish)" stroke-width="1.5"/>
+  </g>
+
+  <g>
+    <circle cx="380" cy="202" r="31" fill="url(#solar-core)" stroke="url(#gold-metal)" stroke-width="2.3"/>
+    <g id="solar-flare" opacity="0.56" stroke="url(#gold-metal)" stroke-width="1.8" stroke-linecap="round">
+      <animate attributeName="opacity" values="0.4;0.85;0.4" dur="4.8s" repeatCount="indefinite"/>
+      <path d="M380 147V112"/>
+      <path d="M380 257V292"/>
+      <path d="M325 202H290"/>
+      <path d="M435 202H470"/>
+      <path d="M341 163L315 137"/>
+      <path d="M419 163L445 137"/>
+      <path d="M341 241L315 267"/>
+      <path d="M419 241L445 267"/>
+    </g>
+  </g>
+
+  <g id="compass-rotor" transform-origin="380 380">
+    <animateTransform attributeName="transform" type="rotate" values="0 380 380;360 380 380" dur="95s" repeatCount="indefinite"/>
+    <g stroke="url(#gold-metal)" stroke-width="2" stroke-linecap="round" opacity="0.62">
+      <path d="M380 112V648"/>
+      <path d="M112 380H648"/>
+      <path d="M188 188L572 572"/>
+      <path d="M188 572L572 188"/>
+      <path d="M250 120L510 640"/>
+      <path d="M120 250L640 510"/>
+      <path d="M510 120L250 640"/>
+      <path d="M120 510L640 250"/>
+    </g>
+  </g>
+
+  <g stroke="url(#ivory-polish)" stroke-width="2" stroke-linecap="round" opacity="0.86">
+    <path d="M160 382C212 381 254 362 288 330C322 297 346 252 380 214"/>
+    <path d="M600 382C548 381 506 362 472 330C438 297 414 252 380 214"/>
+    <path d="M188 460C246 433 292 386 326 334C347 300 363 270 380 238"/>
+    <path d="M572 460C514 433 468 386 434 334C413 300 397 270 380 238"/>
+    <path d="M236 524C302 490 345 434 370 360"/>
+    <path d="M524 524C458 490 415 434 390 360"/>
+  </g>
+
+  <g id="neural-network" stroke="url(#gold-metal)" stroke-width="1.4" opacity="0.78">
+    <path d="M210 314L254 286L310 308L336 358L284 402L222 380Z"/>
+    <path d="M550 314L506 286L450 308L424 358L476 402L538 380Z"/>
+    <path d="M262 446L322 424L380 448L438 424L498 446"/>
+    <path d="M304 286L380 254L456 286"/>
+    <path d="M284 402L380 448L476 402"/>
+    <g fill="url(#teal-accent)" stroke="url(#ivory-polish)" stroke-width="1.2">
+      <circle cx="210" cy="314" r="5.2"><animate attributeName="r" values="5.2;6.4;5.2" dur="3.6s" begin="0s" repeatCount="indefinite"/></circle>
+      <circle cx="254" cy="286" r="5.2"><animate attributeName="r" values="5.2;6.6;5.2" dur="4s" begin="0.4s" repeatCount="indefinite"/></circle>
+      <circle cx="310" cy="308" r="5.2"><animate attributeName="r" values="5.2;6.2;5.2" dur="3.8s" begin="0.7s" repeatCount="indefinite"/></circle>
+      <circle cx="336" cy="358" r="5.2"><animate attributeName="r" values="5.2;6.6;5.2" dur="4.2s" begin="0.2s" repeatCount="indefinite"/></circle>
+      <circle cx="284" cy="402" r="5.2"><animate attributeName="r" values="5.2;6.1;5.2" dur="4.1s" begin="0.9s" repeatCount="indefinite"/></circle>
+      <circle cx="222" cy="380" r="5.2"><animate attributeName="r" values="5.2;6.5;5.2" dur="3.9s" begin="0.3s" repeatCount="indefinite"/></circle>
+      <circle cx="550" cy="314" r="5.2"><animate attributeName="r" values="5.2;6.4;5.2" dur="3.6s" begin="0.2s" repeatCount="indefinite"/></circle>
+      <circle cx="506" cy="286" r="5.2"><animate attributeName="r" values="5.2;6.6;5.2" dur="4s" begin="0.8s" repeatCount="indefinite"/></circle>
+      <circle cx="450" cy="308" r="5.2"><animate attributeName="r" values="5.2;6.2;5.2" dur="3.8s" begin="1s" repeatCount="indefinite"/></circle>
+      <circle cx="424" cy="358" r="5.2"><animate attributeName="r" values="5.2;6.6;5.2" dur="4.2s" begin="0.6s" repeatCount="indefinite"/></circle>
+      <circle cx="476" cy="402" r="5.2"><animate attributeName="r" values="5.2;6.1;5.2" dur="4.1s" begin="0.5s" repeatCount="indefinite"/></circle>
+      <circle cx="538" cy="380" r="5.2"><animate attributeName="r" values="5.2;6.5;5.2" dur="3.9s" begin="0.1s" repeatCount="indefinite"/></circle>
+    </g>
+  </g>
+
+  <g stroke="url(#ivory-polish)" stroke-width="2.7" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M250 390C286 340 332 314 380 314C428 314 474 340 510 390C474 440 428 466 380 466C332 466 286 440 250 390Z"/>
+    <path d="M292 390C316 360 346 344 380 344C414 344 444 360 468 390" opacity="0.74"/>
+  </g>
+
+  <g stroke="url(#gold-metal)" stroke-width="2.4" stroke-linecap="round" opacity="0.95">
+    <path d="M380 272V498"/>
+    <path d="M344 346H416"/>
+    <path d="M348 370H412" opacity="0.84"/>
+    <path d="M352 394H408" opacity="0.68"/>
+    <path d="M380 402V450"/>
+    <path d="M360 450H400"/>
+  </g>
+
+  <g id="bird" transform="translate(0 0)">
+    <animateTransform attributeName="transform" type="translate" values="0 0;3 -4;0 0" dur="6s" repeatCount="indefinite"/>
+    <path d="M462 360C512 322 552 306 610 314C570 334 545 350 526 374C508 398 494 416 470 434" stroke="url(#gold-metal)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    <path d="M610 314C632 298 648 286 676 278C660 300 647 321 636 346" stroke="url(#gold-metal)" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <circle cx="572" cy="338" r="3.8" fill="#d14a2c"/>
+  </g>
+
+  <g id="canoe" transform="translate(0 0)">
+    <animateTransform attributeName="transform" type="translate" values="0 0;0 -2;0 0" dur="4.8s" repeatCount="indefinite"/>
+    <path d="M250 596C286 576 326 566 380 566C434 566 474 576 510 596C474 610 434 618 380 618C326 618 286 610 250 596Z" fill="url(#gold-metal)" stroke="url(#ivory-polish)" stroke-width="1.6"/>
+    <path d="M282 594L306 506L354 594" fill="#e8c77e" stroke="url(#gold-metal)" stroke-width="1.8"/>
+    <path d="M478 594L454 520L406 594" fill="#e8c77e" stroke="url(#gold-metal)" stroke-width="1.8"/>
+    <path d="M380 594V496" stroke="url(#gold-metal)" stroke-width="3"/>
+  </g>
+
+  <g id="waves" stroke="url(#teal-accent)" stroke-width="2.4" stroke-linecap="round" opacity="0.9">
+    <animateTransform attributeName="transform" type="translate" values="0 0;10 0;0 0" dur="7s" repeatCount="indefinite"/>
+    <path d="M224 630C254 616 286 616 318 630C350 644 382 644 414 630C446 616 478 616 510 630C542 644 574 644 604 630"/>
+    <path d="M236 648C266 634 298 634 330 648C362 662 394 662 426 648C458 634 490 634 522 648C554 662 586 662 616 648" opacity="0.78"/>
+  </g>
+</svg>

@@ -29,18 +29,46 @@
 			return "<li>" + path + "</li>";
 		}).join("");
 
+		var symbolItems = (world.symbols || []).map(function (symbol) {
+			return "<span>" + symbol + "</span>";
+		}).join("");
+
 		var linkItems = world.links.map(function (link) {
 			return "<li><a href=\"" + link.href + "\" target=\"_blank\" rel=\"noreferrer noopener\">" + link.label + "</a></li>";
 		}).join("");
 
+		var chamberItems = (world.immersionChambers || []).map(function (chamber) {
+			return "<article class=\"detail-chamber\"><strong>" + chamber.title + "</strong><p>" + chamber.focus + "</p></article>";
+		}).join("");
+
+		var loopItems = (world.practiceLoop || []).map(function (step) {
+			return "<li>" + step + "</li>";
+		}).join("");
+
+		var protocolItems = (world.protocols || []).map(function (item) {
+			return "<li>" + item + "</li>";
+		}).join("");
+
+		var threadItems = (world.knowledgeThreads || []).map(function (item) {
+			return "<li>" + item + "</li>";
+		}).join("");
+
 		detail.innerHTML = ""
 			+ "<h2>" + world.name + "</h2>"
+			+ "<p class=\"detail-callout\">" + (world.identity || "Living cultural pathways and symbolic memory.") + "</p>"
 			+ "<p><strong>World Identity:</strong> " + (world.identity || "Living cultural pathways and symbolic memory.") + "</p>"
 			+ "<p><strong>Region:</strong> " + world.region + "</p>"
+			+ "<p><strong>Orientation:</strong> " + (world.orientation || "Cyclical place intelligence and relational learning pathways.") + "</p>"
 			+ "<p>" + world.summary + "</p>"
 			+ "<p><strong>Favorite:</strong> " + (favorites.has(world.id) ? "Yes" : "No") + "</p>"
 			+ "<p><strong>Visited:</strong> " + (visited.has(world.id) ? "Yes" : "No") + "</p>"
+			+ "<div class=\"detail-symbols\">" + symbolItems + "</div>"
+			+ "<div class=\"actions-row\"><a class=\"btn btn-solid\" href=\"" + (world.entryHref || ("worlds.html?world=" + world.id)) + "\">" + (world.entryLabel || "Enter Immersive World") + "</a><a class=\"btn btn-outline\" href=\"protocols.html\">Open Protocol Context</a></div>"
+			+ "<h3>Immersion Chambers</h3><div class=\"detail-chambers-grid\">" + chamberItems + "</div>"
+			+ "<h3>Practice Loop</h3><ol>" + loopItems + "</ol>"
 			+ "<h3>Experience Paths</h3><ul>" + pathItems + "</ul>"
+			+ "<h3>Knowledge Threads</h3><ul>" + threadItems + "</ul>"
+			+ "<h3>Protocol Anchors</h3><ul>" + protocolItems + "</ul>"
 			+ "<h3>Cross-links</h3><ul>" + linkItems + "</ul>";
 	}
 
@@ -54,7 +82,7 @@
 		worlds.forEach(function (world) {
 			var panel = document.createElement("article");
 			panel.className = "map-panel " + getThemeClass(world);
-			panel.innerHTML = "<h3>" + world.name + "</h3><p>" + world.region + "</p>";
+			panel.innerHTML = "<h3>" + world.name + "</h3><p>" + world.region + "</p><p>" + (world.orientation || "") + "</p>";
 			mapContainer.appendChild(panel);
 		});
 	}
@@ -75,7 +103,7 @@
 			+ "<p>" + world.summary + "</p>"
 			+ "<div class=\"tags\">" + tags + "</div>"
 			+ "<div class=\"card-actions\">"
-			+ "  <button class=\"btn btn-solid\" type=\"button\" data-action=\"view\">Open Path</button>"
+			+ "  <button class=\"btn btn-solid\" type=\"button\" data-action=\"view\">Enter Immersive World</button>"
 			+ "  <button class=\"btn btn-outline\" type=\"button\" data-action=\"favorite\">" + (favorites.has(world.id) ? "Unfavorite" : "Favorite") + "</button>"
 			+ "</div>"
 			+ "<p class=\"status\">" + (visited.has(world.id) ? "Visited" : "Not visited") + "</p>";
@@ -83,7 +111,7 @@
 		card.querySelector('[data-action="view"]').addEventListener("click", function () {
 			visited.add(world.id);
 			writeSet("cv.visited", visited);
-			onSelect(world);
+			window.location.href = world.entryHref || ("worlds.html?world=" + world.id);
 		});
 
 		card.querySelector('[data-action="favorite"]').addEventListener("click", function () {
@@ -94,7 +122,7 @@
 			}
 			writeSet("cv.favorites", favorites);
 			onSelect(world);
-			card.replaceWith(createWorldCard(world, favorites, visited, onSelect));
+			card.replaceWith(createWorldCard(world, favorites, visited, selectedId, onSelect));
 		});
 
 		return card;
@@ -108,18 +136,46 @@
 
 		var favorites = readSet("cv.favorites");
 		var visited = readSet("cv.visited");
-		var selectedId = window.CV_WORLDS.length ? window.CV_WORLDS[0].id : null;
+		var params = new URLSearchParams(window.location.search);
+		var requestedWorldId = params.get("world");
+		var requestedWorld = window.CV_WORLDS.find(function (worldItem) {
+			return worldItem.id === requestedWorldId;
+		});
+		var selectedId = requestedWorld ? requestedWorld.id : (window.CV_WORLDS.length ? window.CV_WORLDS[0].id : null);
 
-		function onSelect(world) {
+		function onSelect(world, shouldBroadcast) {
 			selectedId = world.id;
 			renderWorldDetail(world, favorites, visited);
 			cardsContainer.innerHTML = "";
 			window.CV_WORLDS.forEach(function (worldItem) {
 				cardsContainer.appendChild(createWorldCard(worldItem, favorites, visited, selectedId, onSelect));
 			});
+
+			if (shouldBroadcast !== false) {
+				window.dispatchEvent(new CustomEvent("cv:world-selected", {
+					detail: { worldId: world.id, source: "panel" }
+				}));
+			}
 		}
 
+		window.addEventListener("cv:world-selected", function (event) {
+			if (!event.detail || event.detail.source === "panel") {
+				return;
+			}
+			var chosen = window.CV_WORLDS.find(function (worldItem) {
+				return worldItem.id === event.detail.worldId;
+			});
+			if (chosen) {
+				if (chosen.id === selectedId) {
+					return;
+				}
+				visited.add(chosen.id);
+				writeSet("cv.visited", visited);
+				onSelect(chosen, false);
+			}
+		});
+
 		renderMapPanels(window.CV_WORLDS);
-		onSelect(window.CV_WORLDS[0]);
+		onSelect(requestedWorld || window.CV_WORLDS[0]);
 	});
 })();

@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="css/worlds.css">
   <link rel="stylesheet" href="css/responsive.css">
 </head>
-<body>
+<body class="worlds-atlas-page">
   <div class="ambient-orbs" aria-hidden="true"></div>
   <header class="site-header">
     <a class="brand" href="../index.html">Culturalverse</a>
@@ -25,7 +25,7 @@
     </nav>
   </header>
 
-  <main class="container">
+  <main class="container worlds-atlas-shell">
     <section class="hero reveal">
       <p class="eyebrow">Living World Atlas</p>
       <h1>Enter the Worlds</h1>
@@ -34,18 +34,30 @@
         <span class="path-chip path-ocean">Ocean Path</span>
         <span class="path-chip path-land">Land Path</span>
         <span class="path-chip path-sky">Sky Path</span>
-        <span class="path-chip path-voice">Voice Path</span>
+        <span class="path-chip path-land">Stewardship Path</span>
       </div>
     </section>
 
     <section class="world-viewer-layout reveal">
       <div>
         <h2>Symbolic World Cards</h2>
+        <p class="section-intro">Choose one world entry point, then move through the immersive chamber, protocol anchors, and practice loops.</p>
         <div id="world-cards" class="card-grid world-cards"></div>
       <!-- Immersive 3D World Spheres -->
       <section class="reveal">
-        <p class="section-intro">Explore the worlds as interconnected spheres. Click to dive deeper into each realm.</p>
-        <div id="worlds-three-canvas" class="three-canvas-container" style="height: 500px;"></div>
+          <div class="scene-stage-header">
+            <p class="section-intro">Explore the worlds as living constellations of pathways, symbols, and ceremonial movement.</p>
+            <p class="scene-stage-note">Tap a world, then tap its orbiting markers to surface chambers, symbols, and orientation paths. On mobile, the selected world details remain pinned below the scene.</p>
+          </div>
+          <div class="world-scene-stage">
+            <div id="worlds-three-canvas" class="three-canvas-container"></div>
+            <div id="world-scene-dock" class="world-scene-dock" aria-live="polite">
+              <div class="world-scene-dock__empty">
+                <h3>Scene Focus</h3>
+                <p>Select a world to reveal its cultural markers, symbols, and chamber paths here.</p>
+              </div>
+            </div>
+          </div>
       </section>
       </div>
       <aside id="world-detail" class="card world-detail" aria-live="polite">
@@ -75,6 +87,44 @@
     </section>
   </main>
 
+  <div id="world-focus-overlay" class="world-focus-overlay" hidden>
+    <div class="world-focus-overlay__backdrop" data-close-world-focus></div>
+    <div class="world-focus-overlay__panel" role="dialog" aria-modal="true" aria-labelledby="world-focus-title">
+      <button class="world-focus-overlay__close" type="button" data-close-world-focus aria-label="Close 3D focus viewer">Close</button>
+      <div class="world-focus-overlay__media">
+        <div id="world-focus-canvas" class="world-focus-canvas"></div>
+        <aside id="world-focus-hotspot" class="world-focus-hotspot" hidden>
+          <h3 id="world-focus-hotspot-title">Focus Note</h3>
+          <p id="world-focus-hotspot-copy"></p>
+        </aside>
+      </div>
+      <aside class="world-focus-overlay__copy">
+        <p id="world-focus-kicker" class="world-focus-overlay__kicker">3D Focus</p>
+        <h2 id="world-focus-title">World Focus</h2>
+        <p id="world-focus-summary" class="world-focus-overlay__summary">Select a world node to open a focused environment.</p>
+        <p id="world-focus-context" class="world-focus-overlay__context"></p>
+        <div class="world-focus-overlay__facts">
+          <article class="world-focus-fact">
+            <span class="world-focus-fact__label">Atmosphere</span>
+            <strong id="world-focus-atmosphere">Ambient scene conditions</strong>
+          </article>
+          <article class="world-focus-fact">
+            <span class="world-focus-fact__label">Motion</span>
+            <strong id="world-focus-motion">Layered environmental movement</strong>
+          </article>
+          <article class="world-focus-fact">
+            <span class="world-focus-fact__label">Anchors</span>
+            <strong id="world-focus-anchors">Cultural structures and symbols</strong>
+          </article>
+        </div>
+        <div class="world-focus-overlay__actions">
+          <a id="world-focus-link" class="btn btn-solid" href="worlds.html">Enter World</a>
+          <button class="btn btn-outline" type="button" data-close-world-focus>Back to Atlas</button>
+        </div>
+      </aside>
+    </div>
+  </div>
+
   <footer class="site-footer">
     <p>Track visited worlds and favorites locally in this phase.</p>
   </footer>
@@ -82,12 +132,9 @@
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
   <script src="js/worlds-data.js" defer></script>
   <script src="js/ecosystem-links.js" defer></script>
-    <script src="js/three-global-loader.js" defer></script>
-    <script src="js/three-manager.js" defer></script>
-    <script src="js/mycelium-network.js" defer></script>
-    <script src="js/particle-system.js" defer></script>
+  <script src="js/three-global-loader.js" defer></script>
   <script src="js/world-viewer.js" defer></script>
   <script src="js/culturalverse.js" defer></script>
-    <script src="js/worlds-scene.js" defer></script>
+  <script src="js/worlds-scene.js" defer></script>
 </body>
 </html>

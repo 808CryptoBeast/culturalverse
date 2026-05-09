@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en" data-world="kanaka">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kānaka Maoli World Chamber | Culturalverse</title>
+  <meta name="description" content="Enter the Kānaka Maoli immersive world — ocean voyaging, aina stewardship, and wayfinding practice from mauka to makai.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=DM+Sans:wght@400;500;700&family=Pirata+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/culturalverse.css">
+  <link rel="stylesheet" href="css/world-chamber.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body class="world-chamber-page world-chamber--kanaka">
+
+  <!-- Ambient Three.js canvas -->
+  <div id="world-ambient-canvas" aria-hidden="true"></div>
+
+  <!-- Header -->
+  <header class="site-header" style="position:relative;z-index:10;">
+    <a class="brand" href="../index.html">Culturalverse</a>
+    <nav class="site-nav" aria-label="Main">
+      <a href="../index.html">Home</a>
+      <a href="worlds.html">Worlds</a>
+      <a href="protocols.html">Protocols</a>
+      <a href="matrix.html">Matrix</a>
+      <a href="about.html">About</a>
+    </nav>
+  </header>
+
+  <!-- Breadcrumb back nav -->
+  <nav class="wc-back-nav" aria-label="Breadcrumb">
+    <a href="worlds.html">
+      <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+        <path d="M9 2L4 7l5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      Worlds
+    </a>
+    <span class="wc-breadcrumb-sep" aria-hidden="true">/</span>
+    <span class="wc-breadcrumb-current" aria-current="page">Kānaka Maoli</span>
+  </nav>
+
+  <!-- ── Hero ─────────────────────────────────────────────── -->
+  <section class="wc-hero">
+    <p class="eyebrow wc-reveal">Immersive World Chamber</p>
+    <h1 class="wc-title wc-reveal wc-reveal-delay-1">Kānaka Maoli</h1>
+    <p class="wc-region wc-reveal wc-reveal-delay-1">Hawaii · Pacific Ocean</p>
+    <p class="wc-orientation wc-reveal wc-reveal-delay-2">
+      Mauka to makai wayfinding and seasonal ocean intelligence.
+    </p>
+    <p class="wc-identity wc-reveal wc-reveal-delay-2">
+      A living relationship between land, language, lineage, and responsibility — where memory travels through chant, cultivation, and navigation.
+    </p>
+    <div class="wc-symbols wc-reveal wc-reveal-delay-3">
+      <span>Aina</span>
+      <span>Wā</span>
+      <span>Hoku</span>
+      <span>Moana</span>
+      <span>Mālama</span>
+    </div>
+  </section>
+
+  <hr class="wc-divider">
+
+  <!-- ── Immersion Chambers ────────────────────────────────── -->
+  <section class="wc-section wc-reveal" aria-labelledby="chambers-heading">
+    <div class="wc-section-label">
+      <span class="wc-dot" aria-hidden="true"></span>
+      <span class="wc-tag">Immersion Chambers</span>
+    </div>
+    <h2 id="chambers-heading">Three Entry Points</h2>
+    <p class="wc-intro">
+      Each chamber is a dedicated practice space — approach one at a time, move through it with patience, and carry its orientation into the next.
+    </p>
+    <div class="wc-chambers-grid">
+      <div class="wc-chamber-card wc-reveal wc-reveal-delay-1">
+        <p class="wc-chamber-num">Chamber 01</p>
+        <h3>Voyaging Chamber</h3>
+        <p>Star compass routes, swell reading, and canoe orientation. The ocean is not crossed — it is read. Study how Polynesian navigators held sky, current, and bird as continuous map.</p>
+      </div>
+      <div class="wc-chamber-card wc-reveal wc-reveal-delay-2">
+        <p class="wc-chamber-num">Chamber 02</p>
+        <h3>Aina Chamber</h3>
+        <p>Watershed memory, kalo systems, and kinship stewardship. Trace the movement from mountain rain through loi kalo to shoreline — each layer a relationship, not a resource.</p>
+      </div>
+      <div class="wc-chamber-card wc-reveal wc-reveal-delay-3">
+        <p class="wc-chamber-num">Chamber 03</p>
+        <h3>Moana Chamber</h3>
+        <p>Trade winds, cloud reading, current lines, and waa movement. Watch how sky signs, wave forms, and weather shifts become navigational guidance across open water.</p>
+      </div>
+    </div>
+  </section>
+
+  <hr class="wc-divider">
+
+  <!-- ── Quote Band ─────────────────────────────────────────── -->
+  <div class="wc-quote-band wc-reveal">
+    <blockquote>
+      Knowledge is not extracted from place. It is practiced in relationship with place.
+    </blockquote>
+  </div>
+
+  <hr class="wc-divider">
+
+  <!-- ── Practice Loop ─────────────────────────────────────── -->
+  <section class="wc-section wc-reveal" aria-labelledby="loop-heading">
+    <div class="wc-section-label">
+      <span class="wc-dot" aria-hidden="true"></span>
+      <span class="wc-tag">Practice Loop</span>
+    </div>
+    <h2 id="loop-heading">The Recurring Cycle</h2>
+    <p class="wc-intro">
+      Move through this sequence repeatedly. Each pass deepens orientation — there is no final completion, only widening relationship.
+    </p>
+    <div class="wc-loop-steps">
+      <div class="wc-loop-step wc-reveal wc-reveal-delay-1">
+        <div class="wc-step-num" aria-hidden="true">01</div>
+        <p>Observe winds, currents, and watershed movement — locate yourself in the mauka-to-makai flow before engaging any other layer.</p>
+      </div>
+      <div class="wc-loop-step wc-reveal wc-reveal-delay-2">
+        <div class="wc-step-num" aria-hidden="true">02</div>
+        <p>Trace star houses, swell directions, and canoe pathways — orient motion through sky and sea rather than fixed coordinates alone.</p>
+      </div>
+      <div class="wc-loop-step wc-reveal wc-reveal-delay-3">
+        <div class="wc-step-num" aria-hidden="true">03</div>
+        <p>Reflect through protocol and community responsibility — ask how your engagement honors the people and land that hold this knowledge.</p>
+      </div>
+    </div>
+  </section>
+
+  <hr class="wc-divider">
+
+  <!-- ── Knowledge Threads ──────────────────────────────────── -->
+  <section class="wc-section wc-reveal" aria-labelledby="threads-heading">
+    <div class="wc-section-label">
+      <span class="wc-dot" aria-hidden="true"></span>
+      <span class="wc-tag">Knowledge Threads</span>
+    </div>
+    <h2 id="threads-heading">Running Lines</h2>
+    <p class="wc-intro">
+      These threads connect across all three chambers. Pull any one and the others follow.
+    </p>
+    <ul class="wc-threads-list" role="list">
+      <li class="wc-reveal wc-reveal-delay-1">Wayfinding and celestial orientation — the sky as living chart held in body memory, not instrument.</li>
+      <li class="wc-reveal wc-reveal-delay-2">Ecological literacy through seasonal cycles — kalo, rain shadow, coral, and migration as integrated curriculum.</li>
+      <li class="wc-reveal wc-reveal-delay-3">Protocol-based learning and relational accountability — relationship with knowledge holders precedes content access.</li>
+    </ul>
+  </section>
+
+  <hr class="wc-divider">
+
+  <!-- ── Protocol Anchors ───────────────────────────────────── -->
+  <section class="wc-section wc-reveal" aria-labelledby="protocol-heading">
+    <div class="wc-section-label">
+      <span class="wc-dot" aria-hidden="true"></span>
+      <span class="wc-tag">Protocol Anchors</span>
+    </div>
+    <h2 id="protocol-heading">Before You Enter</h2>
+    <p class="wc-intro">
+      These are not restrictions — they are the architecture of respectful engagement. They apply to all three chambers.
+    </p>
+    <ul class="wc-protocol-list" role="list">
+      <li class="wc-reveal wc-reveal-delay-1">Name and acknowledge the origin community context before sharing or applying what you learn here.</li>
+      <li class="wc-reveal wc-reveal-delay-2">Prioritize relationship over extraction — seek connection with living practitioners, not just archived content.</li>
+      <li class="wc-reveal wc-reveal-delay-3">Treat place knowledge as lived responsibility — what you learn here carries obligation to the land and people it comes from.</li>
+    </ul>
+  </section>
+
+  <!-- ── CTA ────────────────────────────────────────────────── -->
+  <section class="wc-cta wc-reveal">
+    <p class="wc-cta-label">Continue your path through the Culturalverse.</p>
+    <a class="btn btn-solid" href="worlds.html">Back to All Worlds</a>
+    <a class="btn btn-outline" href="protocols.html">Open Protocol Chamber</a>
+    <a class="btn btn-outline" href="https://www.pikoverse.xyz/" target="_blank" rel="noreferrer noopener">Pikoverse Connection</a>
+  </section>
+
+  <footer class="site-footer" style="position:relative;z-index:1;">
+    <p>Kānaka Maoli knowledge belongs to its origin community. Engage with care and accountability.</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="js/three-global-loader.js"></script>
+  <script src="js/world-chamber.js"></script>
+</body>
+</html>

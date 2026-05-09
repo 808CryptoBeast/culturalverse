@@ -1,15 +1,15 @@
-// Immersive world-layer modal interactions for home portal cards.
+ï»¿// Immersive world-layer modal interactions for home portal cards.
 (function () {
 var lastTrigger = null;
 
 var WORLDS = {
 kanaka: {
 title: "Kanaka Maoli Immersive Layer",
-region: "Hawaii · Pacific Ocean",
+region: "Hawaii - Pacific Ocean",
 summary:
 "Enter a living relationship between land, language, and ocean movement where memory travels through chant, cultivation, and genealogy.",
 story:
-"Trace the movement from mountain rain to lo'i kalo and into shoreline navigation knowledge, where each place-name carries responsibility.",
+"Trace the movement from mountain rain to loi kalo and into shoreline navigation knowledge, where each place-name carries responsibility.",
 paths: [
 "Mauka-to-makai place orientation",
 "Language and pronunciation in context",
@@ -18,11 +18,11 @@ paths: [
 quote:
 "Knowledge is not extracted from place. It is practiced in relationship with place.",
 themeClass: "world-layer--kanaka",
-link: "culturalverse/worlds.html"
+link: "culturalverse/kanaka-world.html"
 },
 kemet: {
 title: "Kemet Immersive Layer",
-region: "Nile Valley · Northeast Africa",
+region: "Nile Valley - Northeast Africa",
 summary:
 "Step into story architectures shaped by river cycles, temple alignments, and symbolic memory systems held across generations.",
 story:
@@ -35,7 +35,7 @@ paths: [
 quote:
 "Story survives where symbol, place, and practice remain in dialogue.",
 themeClass: "world-layer--kemet",
-link: "culturalverse/worlds.html"
+link: "culturalverse/kemet-world.html"
 }
 };
 

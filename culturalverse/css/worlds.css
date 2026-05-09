@@ -4,6 +4,13 @@
 	gap: 1rem;
 }
 
+.worlds-atlas-page .container.worlds-atlas-shell {
+	width: calc(100vw - clamp(1.8rem, 4vw, 4rem));
+	max-width: none;
+	margin-left: auto;
+	margin-right: auto;
+}
+
 .world-cards {
 	align-items: start;
 }
@@ -101,8 +108,399 @@
 	padding-left: 1rem;
 }
 
+.world-detail ol {
+	margin-top: 0.45rem;
+	padding-left: 1.1rem;
+	display: grid;
+	gap: 0.35rem;
+}
+
+.world-detail h3 {
+	margin-top: 0.9rem;
+	margin-bottom: 0.35rem;
+}
+
+.world-detail .actions-row {
+	margin-top: 0.9rem;
+}
+
 .world-detail a {
 	color: var(--cv-gold-hi);
+}
+
+.detail-callout {
+	padding: 0.8rem 0.9rem;
+	border-left: 3px solid rgba(240, 201, 106, 0.44);
+	background: rgba(240, 201, 106, 0.08);
+	border-radius: 0.8rem;
+	color: rgba(242, 233, 216, 0.88);
+}
+
+.detail-symbols {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.45rem;
+	margin: 0.9rem 0;
+}
+
+.detail-symbols span {
+	padding: 0.28rem 0.62rem;
+	border-radius: 999px;
+	border: 1px solid rgba(240, 201, 106, 0.28);
+	background: rgba(240, 201, 106, 0.10);
+	font-size: 0.82rem;
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
+}
+
+.detail-chambers-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
+	gap: 0.7rem;
+	margin-top: 0.45rem;
+}
+
+.detail-chamber {
+	padding: 0.8rem 0.85rem;
+	border-radius: 1rem;
+	border: 1px solid rgba(240, 201, 106, 0.18);
+	background: rgba(8, 14, 20, 0.44);
+	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.03);
+}
+
+.detail-chamber p {
+	margin: 0.35rem 0 0;
+	color: rgba(231, 223, 205, 0.76);
+}
+
+.scene-stage-header {
+	display: grid;
+	gap: 0.45rem;
+	margin-top: 1rem;
+	margin-bottom: 0.8rem;
+}
+
+.scene-stage-note {
+	margin: 0;
+	color: rgba(231, 223, 205, 0.72);
+	font-size: 0.94rem;
+}
+
+.world-scene-stage {
+	display: grid;
+	grid-template-columns: minmax(0, 1.7fr) minmax(22rem, 28rem);
+	gap: 0.9rem;
+	align-items: stretch;
+}
+
+.three-canvas-container {
+	position: relative;
+	min-height: clamp(22rem, 54vw, 34rem);
+	border-radius: var(--cv-radius-md);
+	border: 1px solid rgba(240, 201, 106, 0.22);
+	overflow: hidden;
+	background:
+		radial-gradient(circle at 50% 16%, rgba(240, 201, 106, 0.08), transparent 30%),
+		radial-gradient(circle at 18% 84%, rgba(31, 159, 179, 0.12), transparent 32%),
+		linear-gradient(180deg, rgba(4, 9, 16, 0.94), rgba(7, 10, 18, 0.86));
+	box-shadow: var(--cv-shadow-soft), 0 0 28px rgba(0, 0, 0, 0.24);
+}
+
+.world-scene-dock {
+	display: grid;
+	gap: 0.8rem;
+	padding: 1rem;
+	border-radius: var(--cv-radius-md);
+	border: 1px solid rgba(240, 201, 106, 0.24);
+	background:
+		radial-gradient(circle at 0 0, rgba(240, 201, 106, 0.14), transparent 34%),
+		var(--cv-glass-warm);
+	box-shadow: var(--cv-shadow-soft);
+}
+
+.world-scene-dock.theme-kanaka {
+	border-color: rgba(60, 179, 113, 0.36);
+	background:
+		radial-gradient(circle at 0 0, rgba(60, 179, 113, 0.16), transparent 34%),
+		radial-gradient(circle at 100% 100%, rgba(31, 159, 179, 0.14), transparent 40%),
+		var(--cv-glass-warm);
+}
+
+.world-scene-dock.theme-kemet {
+	border-color: rgba(240, 201, 106, 0.38);
+	background:
+		radial-gradient(circle at 0 0, rgba(240, 201, 106, 0.16), transparent 34%),
+		radial-gradient(circle at 100% 100%, rgba(217, 133, 69, 0.14), transparent 40%),
+		var(--cv-glass-warm);
+}
+
+.world-scene-dock__empty h3,
+.world-scene-focus__header h3 {
+	margin-bottom: 0.35rem;
+}
+
+.world-scene-focus {
+	display: grid;
+	gap: 0.8rem;
+}
+
+.world-scene-focus__header p,
+.world-scene-focus__marker-copy,
+.world-scene-focus__summary,
+.world-scene-dock__empty p {
+	margin: 0;
+	color: rgba(231, 223, 205, 0.78);
+}
+
+.world-scene-focus__crest {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.45rem;
+}
+
+.world-scene-focus__crest span {
+	padding: 0.28rem 0.62rem;
+	border-radius: 999px;
+	border: 1px solid rgba(240, 201, 106, 0.28);
+	background: rgba(240, 201, 106, 0.08);
+	font-size: 0.82rem;
+	letter-spacing: 0.04em;
+	text-transform: uppercase;
+}
+
+.world-scene-focus__markers {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 0.55rem;
+}
+
+.world-scene-chip {
+	width: 100%;
+	padding: 0.75rem 0.8rem;
+	border-radius: 1rem;
+	border: 1px solid rgba(240, 201, 106, 0.18);
+	background: rgba(10, 16, 24, 0.58);
+	color: inherit;
+	text-align: left;
+	cursor: pointer;
+	transition: transform 180ms ease, border-color 180ms ease, background 180ms ease;
+}
+
+.world-scene-chip:hover,
+.world-scene-chip:focus-visible,
+.world-scene-chip.is-active {
+	transform: translateY(-1px);
+	border-color: rgba(240, 201, 106, 0.42);
+	background: rgba(240, 201, 106, 0.10);
+	outline: none;
+}
+
+.world-scene-chip strong,
+.world-scene-chip span {
+	display: block;
+}
+
+.world-scene-chip span {
+	margin-top: 0.18rem;
+	font-size: 0.82rem;
+	color: rgba(231, 223, 205, 0.72);
+}
+
+.world-scene-focus__marker {
+	padding: 0.85rem 0.9rem;
+	border-radius: 1rem;
+	border: 1px solid rgba(240, 201, 106, 0.18);
+	background: rgba(5, 10, 16, 0.44);
+	display: grid;
+	gap: 0.35rem;
+}
+
+.world-scene-focus__marker-meta {
+	font-size: 0.78rem;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	color: rgba(231, 223, 205, 0.58);
+}
+
+.world-scene-focus__actions {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.55rem;
+}
+
+.world-focus-overlay {
+	position: fixed;
+	inset: 0;
+	z-index: 120;
+	display: grid;
+	place-items: center;
+	padding: clamp(0.9rem, 2vw, 1.6rem);
+}
+
+.world-focus-overlay[hidden] {
+	display: none;
+}
+
+.world-focus-overlay__backdrop {
+	position: absolute;
+	inset: 0;
+	background: rgba(2, 5, 10, 0.82);
+	backdrop-filter: blur(10px);
+}
+
+.world-focus-overlay__panel {
+	position: relative;
+	z-index: 1;
+	width: min(1680px, calc(100vw - 2rem));
+	min-height: min(84vh, 56rem);
+	display: grid;
+	grid-template-columns: minmax(0, 1.8fr) minmax(20rem, 28rem);
+	border-radius: 1.5rem;
+	border: 1px solid rgba(240, 201, 106, 0.24);
+	overflow: hidden;
+	background:
+		radial-gradient(circle at 18% 18%, rgba(31, 159, 179, 0.1), transparent 24%),
+		radial-gradient(circle at 0 0, rgba(240, 201, 106, 0.12), transparent 24%),
+		linear-gradient(180deg, rgba(4, 8, 14, 0.96), rgba(6, 10, 18, 0.96));
+	box-shadow: 0 32px 90px rgba(0, 0, 0, 0.5);
+}
+
+.world-focus-overlay__panel::before {
+	content: "";
+	position: absolute;
+	inset: 1rem;
+	border-radius: 1rem;
+	border: 1px solid rgba(255, 255, 255, 0.05);
+	pointer-events: none;
+	box-shadow: inset 0 0 0 1px rgba(240, 201, 106, 0.04);
+}
+
+.world-focus-overlay__close {
+	position: absolute;
+	top: 1rem;
+	right: 1rem;
+	z-index: 2;
+	border-radius: 999px;
+	border: 1px solid rgba(240, 201, 106, 0.22);
+	background: rgba(7, 12, 18, 0.75);
+	color: var(--cv-text);
+	padding: 0.5rem 0.9rem;
+	cursor: pointer;
+}
+
+.world-focus-overlay__media {
+	position: relative;
+	min-height: 60vh;
+	background:
+		radial-gradient(circle at 50% 18%, rgba(191, 232, 255, 0.08), transparent 28%),
+		linear-gradient(180deg, rgba(5, 11, 18, 0.96), rgba(1, 6, 12, 0.98));
+}
+
+.world-focus-overlay__media::after {
+	content: "";
+	position: absolute;
+	inset: 0;
+	background:
+		linear-gradient(180deg, rgba(0, 0, 0, 0.1), transparent 18%, transparent 72%, rgba(0, 0, 0, 0.36)),
+		radial-gradient(circle at 50% 100%, rgba(240, 201, 106, 0.08), transparent 28%);
+	pointer-events: none;
+}
+
+.world-focus-canvas {
+	position: absolute;
+	inset: 0;
+}
+
+.world-focus-hotspot {
+	position: absolute;
+	left: 1rem;
+	top: 1rem;
+	max-width: min(24rem, calc(100% - 2rem));
+	padding: 0.8rem 0.9rem;
+	border-radius: 0.9rem;
+	border: 1px solid rgba(240, 201, 106, 0.28);
+	background: rgba(8, 13, 21, 0.84);
+	backdrop-filter: blur(6px);
+	box-shadow: 0 12px 28px rgba(0, 0, 0, 0.35);
+	z-index: 3;
+	pointer-events: none;
+}
+
+.world-focus-hotspot h3 {
+	margin: 0;
+	font-size: 1rem;
+	color: rgba(241, 231, 208, 0.96);
+}
+
+.world-focus-hotspot p {
+	margin: 0.35rem 0 0;
+	font-size: 0.92rem;
+	line-height: 1.58;
+	color: rgba(228, 222, 210, 0.86);
+}
+
+.world-focus-overlay__copy {
+	padding: clamp(1.1rem, 2vw, 1.8rem);
+	display: grid;
+	align-content: center;
+	gap: 0.85rem;
+	background:
+		linear-gradient(180deg, rgba(8, 11, 18, 0.88), rgba(8, 11, 18, 0.74)),
+		radial-gradient(circle at 0 0, rgba(240, 201, 106, 0.06), transparent 30%);
+	border-left: 1px solid rgba(240, 201, 106, 0.12);
+}
+
+.world-focus-overlay__kicker {
+	margin: 0;
+	text-transform: uppercase;
+	letter-spacing: 0.16em;
+	font-size: 0.76rem;
+	color: rgba(240, 201, 106, 0.72);
+}
+
+.world-focus-overlay__summary,
+.world-focus-overlay__context {
+	margin: 0;
+	color: rgba(231, 223, 205, 0.82);
+	line-height: 1.7;
+}
+
+.world-focus-overlay__actions {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.6rem;
+	margin-top: 0.25rem;
+}
+
+.world-focus-overlay__facts {
+	display: grid;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	gap: 0.7rem;
+	margin-top: 0.1rem;
+	margin-bottom: 0.2rem;
+}
+
+.world-focus-fact {
+	padding: 0.85rem 0.8rem;
+	border-radius: 1rem;
+	border: 1px solid rgba(240, 201, 106, 0.14);
+	background: rgba(12, 17, 24, 0.56);
+	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.03);
+	display: grid;
+	gap: 0.3rem;
+}
+
+.world-focus-fact__label {
+	font-size: 0.72rem;
+	text-transform: uppercase;
+	letter-spacing: 0.14em;
+	color: rgba(240, 201, 106, 0.62);
+}
+
+.world-focus-fact strong {
+	font-size: 0.94rem;
+	line-height: 1.45;
+	color: rgba(244, 238, 229, 0.9);
 }
 
 .map-panels {
@@ -178,5 +576,70 @@
 @media (max-width: 960px) {
 	.world-viewer-layout {
 		grid-template-columns: 1fr;
+	}
+
+	.world-scene-stage {
+		grid-template-columns: 1fr;
+	}
+
+	.world-focus-overlay__panel {
+		grid-template-columns: 1fr;
+		min-height: auto;
+	}
+
+	.world-focus-overlay__media {
+		min-height: 26rem;
+	}
+
+	.world-focus-overlay__copy {
+		border-left: 0;
+		border-top: 1px solid rgba(240, 201, 106, 0.12);
+	}
+
+	.world-focus-overlay__facts {
+		grid-template-columns: 1fr;
+	}
+}
+
+@media (max-width: 640px) {
+	.worlds-atlas-page .container.worlds-atlas-shell {
+		width: calc(100vw - 1rem);
+	}
+
+	.world-scene-dock {
+		padding: 0.85rem;
+	}
+
+	.three-canvas-container {
+		min-height: 20rem;
+	}
+
+	.world-scene-focus__markers {
+		grid-template-columns: 1fr;
+	}
+
+	.world-scene-focus__actions {
+		flex-direction: column;
+	}
+
+	.detail-chambers-grid {
+		grid-template-columns: 1fr;
+	}
+
+	.world-focus-overlay {
+		padding: 0.4rem;
+	}
+
+	.world-focus-overlay__panel {
+		width: calc(100vw - 0.8rem);
+		border-radius: 1rem;
+	}
+
+	.world-focus-overlay__media {
+		min-height: 18rem;
+	}
+
+	.world-focus-overlay__actions {
+		flex-direction: column;
 	}
 }

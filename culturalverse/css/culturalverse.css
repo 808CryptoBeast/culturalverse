@@ -176,6 +176,8 @@ section {
 .modern-hero {
 	backdrop-filter: blur(14px) saturate(130%);
 	border-color: rgba(240, 201, 106, 0.42);
+	min-height: 31rem;
+	padding-right: clamp(17.5rem, 31vw, 26rem);
 	padding-bottom: 2.8rem;
 }
 
@@ -251,104 +253,59 @@ h3 {
 	color: var(--cv-muted);
 }
 
-.hero-motif {
+.hero-neuro-motif {
 	position: absolute;
-	right: -14px;
-	top: -18px;
-	width: 286px;
-	height: 286px;
+	right: clamp(0.9rem, 2.6vw, 1.8rem);
+	top: 50%;
+	transform: translateY(-50%);
+	width: clamp(15rem, 28vw, 23rem);
+	aspect-ratio: 1;
+	border-radius: 50%;
 	pointer-events: none;
-}
-
-.atlas-glyph {
-	filter: drop-shadow(0 0 18px rgba(240, 201, 106, 0.24));
-}
-
-.glyph-core {
-	position: absolute;
-	inset: 112px;
-	border-radius: 999px;
+	overflow: hidden;
 	background:
-		radial-gradient(circle at 35% 35%, rgba(240, 201, 106, 0.95), rgba(217, 133, 69, 0.62));
+		radial-gradient(circle at 50% 50%, rgba(248, 235, 206, 0.12), transparent 55%),
+		linear-gradient(180deg, rgba(8, 12, 26, 0.9), rgba(3, 5, 11, 0.98));
 	box-shadow:
-		0 0 34px rgba(240, 201, 106, 0.35),
-		inset 0 0 16px rgba(7, 16, 13, 0.45);
+		inset 0 0 0 1px rgba(248, 235, 206, 0.2),
+		0 20px 34px rgba(2, 5, 16, 0.66);
+	opacity: 0.88;
+	z-index: 1;
 }
 
-.glyph-orbit {
+.hero-emblem-canvas {
 	position: absolute;
-	border-radius: 999px;
-	border: 1px dashed rgba(240, 201, 106, 0.34);
-	animation: glyphSpin 16s linear infinite;
+	inset: 0;
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	overflow: hidden;
 }
 
-.glyph-orbit-1 {
-	inset: 50px;
-	border-color: rgba(31, 159, 179, 0.42);
-}
-
-.glyph-orbit-2 {
-	inset: 22px;
-	border-color: rgba(60, 179, 113, 0.38);
-	animation-direction: reverse;
-	animation-duration: 22s;
-}
-
-.glyph-line {
+.hero-neuro-motif::after {
+	content: "";
 	position: absolute;
-	height: 1px;
-	background: linear-gradient(90deg, transparent, rgba(240, 201, 106, 0.52), transparent);
-	transform-origin: center;
+	inset: 10%;
+	border-radius: 50%;
+	border: 1px solid rgba(242, 214, 151, 0.24);
+	box-shadow:
+		0 0 0 1px rgba(245, 232, 201, 0.12) inset,
+		0 0 34px rgba(206, 156, 67, 0.24);
+	animation: breathCycle 6.6s ease-in-out infinite;
 }
 
-.glyph-line-1 {
-	left: 46px;
-	top: 140px;
-	width: 198px;
-	transform: rotate(24deg);
-}
-
-.glyph-line-2 {
-	left: 58px;
-	top: 148px;
-	width: 168px;
-	transform: rotate(-34deg);
-}
-
-.glyph-node {
-	position: absolute;
-	padding: 0.18rem 0.48rem;
-	border-radius: 999px;
-	font-size: 0.64rem;
-	letter-spacing: 0.08em;
-	text-transform: uppercase;
-	color: var(--cv-bone);
-	border: 1px solid rgba(240, 201, 106, 0.28);
-	background: rgba(7, 16, 13, 0.72);
-	box-shadow: 0 0 10px rgba(240, 201, 106, 0.16);
-}
-
-.glyph-node-1 {
-	left: 18px;
-	top: 96px;
-}
-
-.glyph-node-2 {
-	right: 8px;
-	top: 140px;
-}
-
-.glyph-node-3 {
-	left: 102px;
-	bottom: 14px;
-}
-
-@keyframes glyphSpin {
+@keyframes breathCycle {
 	from {
-		transform: rotate(0deg);
+		opacity: 0.42;
+		transform: scale(0.985);
+	}
+	50% {
+		opacity: 0.84;
+		transform: scale(1.03);
 	}
 	to {
-		transform: rotate(360deg);
+		opacity: 0.42;
+		transform: scale(0.985);
 	}
 }
 
